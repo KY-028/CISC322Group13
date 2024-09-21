@@ -34,8 +34,8 @@
             padding-inline: 100px;
         }
         .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             color: #ffffff;
         }
@@ -44,10 +44,12 @@
             padding: 20px;
             text-align: center;
             border-radius: 10px;
+            flex: 1 1 calc(50% - 20px); /* Adjusts to 2 columns */
+            box-sizing: border-box;
         }
         .members-container {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             color: #ffffff;
         }
@@ -56,6 +58,8 @@
             padding: 20px;
             text-align: center;
             border-radius: 10px;
+            flex: 1 1 calc(16.66% - 20px); /* Adjusts to 6 columns */
+            box-sizing: border-box;
         }
         a {
             color: #98d38e;
@@ -75,6 +79,11 @@
             background-color: #98d38e;
             margin-right: 10px;
             vertical-align: middle;
+        }
+        @media (max-width: 768px) {
+            .grid-item, .member-item {
+                flex: 1 1 calc(100% - 20px); /* Adjusts to 1 column on smaller screens */
+            }
         }
     </style>
 </head>
@@ -143,7 +152,7 @@
             <p>Role: Member</p>
         </div>
         <div class="member-item">
-            <h3>Karry </h3>
+            <h3>Karry Huang</h3>
             <p>Role: Member</p>
         </div>
         <div class="member-item">
