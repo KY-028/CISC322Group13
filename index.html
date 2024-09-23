@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,64 +14,100 @@
             background-color: rgb(24, 24, 28);
             color: white;
         }
+
         nav {
             background-color: #26232a;
             overflow: hidden;
         }
+
+        .nav-wrapper {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+        }
+
         nav a {
             float: left;
             display: block;
             color: #cdffc4;
             text-align: center;
-            padding: 14px 16px;
+            margin-left: 12px;
+            padding: 14px 20px;
             text-decoration: none;
+
         }
+
         nav a:hover {
             background-color: #ddd;
             color: black;
         }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
         section {
             padding: 20px;
-            padding-inline: 100px;
         }
+
         .grid-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             color: #ffffff;
         }
+
         .grid-item {
             background-color: #2a2d35;
             padding: 20px;
+            padding-bottom: 40px;
             text-align: center;
             border-radius: 10px;
-            flex: 1 1 calc(50% - 20px); /* Adjusts to 2 columns */
+            flex: 1 1 calc(50% - 20px);
             box-sizing: border-box;
         }
+
+        .grid-item-full {
+            background-color: #2a2d35;
+            padding: 20px;
+            padding-bottom: 40px;
+            text-align: center;
+            border-radius: 10px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
         .members-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             color: #ffffff;
         }
+
         .member-item {
             background-color: #2a2d35;
             padding: 20px;
             text-align: center;
             border-radius: 10px;
-            flex: 1 1 calc(16.66% - 20px); /* Adjusts to 6 columns */
+            flex: 1 1 calc(16.66% - 20px);
             box-sizing: border-box;
         }
+
         a {
             color: #98d38e;
             text-decoration: none;
         }
+
         h1 {
             color: #98d38e;
             background: linear-gradient(90deg, #98d38e, #4caf50);
             -webkit-background-clip: text;
             color: transparent;
         }
+
         h2::before {
             content: '‎ ';
             display: inline-block;
@@ -80,87 +117,111 @@
             margin-right: 10px;
             vertical-align: middle;
         }
+
         @media (max-width: 768px) {
-            .grid-item, .member-item {
-                flex: 1 1 calc(100% - 20px); /* Adjusts to 1 column on smaller screens */
+            nav a {
+                padding: 14px 8px;
+            }
+
+            container {
+                padding: 14px;
+            }
+
+            .grid-item,
+            .grid-item-full .member-item {
+                flex: 1 1 calc(100% - 20px);
+                /* Adjusts to 1 column on smaller screens */
+            }
+
+
+            .member-item {
+                background-color: #2a2d35;
+                padding: 20px;
+                text-align: center;
+                border-radius: 10px;
+                flex: 1 1 calc(50% - 20px);
+                box-sizing: border-box;
             }
         }
     </style>
 </head>
+
 <body>
-
-<nav>
-    <a href="#title">Home</a>
-    <a href="#intro">Introduction</a>
-    <a href="#documentation">Documentation</a>
-    <a href="#reports">Reports & Slides</a>
-</nav>
-
-<section id="title">
-    <h1 style="font-size:xx-large; text-align: center;">CISC322 Group 13</h1>
-</section>
-
-<section id="intro">
-    <h2>Introduction to ScummVM</h2>
-    <p>ScummVM is a program which allows you to run certain classic graphical point-and-click adventure games, provided you already have their data files.</p>
-</section>
-
-<section id="documentation">
-    <h2>Documentation</h2>
-    <p>Here you will find links and other documentation relevant to our course project.</p>
-</section>
-
-<section id="reports">
-    <h2>Reports & Slides</h2>
-    <div class="grid-container">
-        <div class="grid-item">
-            <h3>Assignment 1  (Not submitted)</h3>
-            <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#title">Home</a>
+            <a href="#intro">Introduction</a>
+            <a href="#documentation">Documentation</a>
+            <a href="#reports">Reports & Slides</a>
         </div>
-        <div class="grid-item">
-            <h3>Assignment 2 (Not submitted)</h3>
-            <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
-        </div>
-        <div class="grid-item">
-            <h3>Assignment 3 (Not submitted)</h3>
-            <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
-        </div>
-        <div class="grid-item">
-            <h3>Assignment 4 (Not submitted)</h3>
-            <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
-        </div>
+    </nav>
+    <div class="container">
+
+        <section id="title">
+            <h1 style="font-size:xxx-large; text-align: center; margin-bottom: 2px;">Prime 6's Group Project Site</h1>
+            <h1 style="font-size:x-large; text-align: center; color: yellow;">CISC 322/326, Group 13, Fall 2024</h2>
+        </section>
+
+        <section id="intro">
+            <h2>Introduction to ScummVM</h2>
+            <p>ScummVM is a program which allows you to run certain classic graphical point-and-click adventure games,
+                provided you already have their data files.</p>
+        </section>
+
+        <section id="documentation">
+            <h2>Relevant Links & Documentation</h2>
+            <p>Here you will find links and other documentation relevant to our course project.</p>
+        </section>
+
+        <section id="reports">
+            <h2>Reports & Slides</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Assignment 1 (Not submitted)</h3>
+                    <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
+                </div>
+                <div class="grid-item">
+                    <h3>Assignment 2 (Not submitted)</h3>
+                    <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
+                </div>
+                <div class="grid-item-full">
+                    <h3>Assignment 3 (Not submitted)</h3>
+                    <a href="">Report</a> | <a href="">Slides</a> | <a href="">Citation</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="members">
+            <h2>Project Members</h2>
+            <div class="members-container">
+                <div class="member-item">
+                    <h3>Kevin Yao</h3>
+                    <p>Role: Team Lead</p>
+                </div>
+                <div class="member-item">
+                    <h3>Bill Wei</h3>
+                    <p>Role: Presenter</p>
+                </div>
+                <div class="member-item">
+                    <h3>Kian Bahasadri</h3>
+                    <p>Role: Presenter</p>
+                </div>
+                <div class="member-item">
+                    <h3>Ryan Liu</h3>
+                    <p>Role: Member</p>
+                </div>
+                <div class="member-item">
+                    <h3>Paul Wang</h3>
+                    <p>Role: Member</p>
+                </div>
+                <div class="member-item">
+                    <h3>Karry Huang</h3>
+                    <p>Role: Member</p>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-
-<section id="members">
-    <h2>Project Members</h2>
-    <div class="members-container">
-        <div class="member-item">
-            <h3>Ryan Liu</h3>
-            <p>Role: Presenter</p>
-        </div>
-        <div class="member-item">
-            <h3>Kevin Yao</h3>
-            <p>Role: Team Lead</p>
-        </div>
-        <div class="member-item">
-            <h3>Bill Wei</h3>
-            <p>Role: Presenter</p>
-        </div>
-        <div class="member-item">
-            <h3>Paul Wang</h3>
-            <p>Role: Member</p>
-        </div>
-        <div class="member-item">
-            <h3>Karry Huang</h3>
-            <p>Role: Member</p>
-        </div>
-        <div class="member-item">
-            <h3>Kian Bahasadri</h3>
-            <p>Role: Member</p>
-        </div>
-    </div>
-</section>
 
 </body>
+
 </html>
